@@ -4,4 +4,5 @@ load s1, 0x02
 wrprt s1, 0x80
 rdprt s2, 0
 rdprt s3, 0x80
+load s5, 8
 end: jump end
