@@ -6,4 +6,44 @@ Starting static elaboration
 Pass Through NonSizing Optimizer
 WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'sleep' [D:/Okul/5/EHB326/Project/Embedded_Final_Project/source_files/top.v:19]
 Completed static elaboration
-INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "D:/Okul/5/EHB326/Project/Embedded_Final_Project/source_files/ram_out_selector.v" Line 1. Module ram_out_selector doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Okul/5/EHB326/Project/Embedded_Final_Project/source_files/BRAM0.v" Line 53. Module BRAM0 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Okul/5/EHB326/Project/Embedded_Final_Project/source_files/ram_out_selector.v" Line 1. Module ram_out_selector doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Okul/5/EHB326/Project/Embedded_Final_Project/source_files/BRAM0.v" Line 53. Module BRAM0 doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4_output_stage(...
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4_output_stage(...
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4_softecc_outpu...
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4(C_FAMILY="kin...
+Compiling module xil_defaultlib.design_1_blk_mem_gen_0_1
+Compiling module xil_defaultlib.design_1_blk_mem_gen_1_0
+Compiling module xil_defaultlib.ram_out_selector
+Compiling module xil_defaultlib.design_1_ram_out_selector_0_0
+Compiling module xil_defaultlib.ram_selector
+Compiling module xil_defaultlib.design_1_ram_selector_0_0
+Compiling module unisims_ver.LUT6_2
+Compiling module unisims_ver.FDRE_default
+Compiling module unisims_ver.FD
+Compiling module unisims_ver.LUT6
+Compiling module unisims_ver.FDR
+Compiling module unisims_ver.XORCY
+Compiling module unisims_ver.MUXCY
+Compiling module unisims_ver.FD_2
+Compiling module unisims_ver.RAM32M
+Compiling module unisims_ver.FDR_2
+Compiling module unisims_ver.RAM64M
+Compiling module xil_defaultlib.kcpsm6_default
+Compiling module unisims_ver.RB18_INTERNAL_VLOG(READ_WIDTH_A=...
+Compiling module unisims_ver.RAMB18E1(INITP_00=256'b010000000...
+Compiling module unisims_ver.RAMB16BWER(DATA_WIDTH_A=18,DATA_...
+Compiling module xil_defaultlib.BRAM0
+Compiling module xil_defaultlib.top
+Compiling module xil_defaultlib.design_1_top_0_0
+Compiling module xil_defaultlib.design_1
+Compiling module xil_defaultlib.design_1_wrapper
+Compiling module xil_defaultlib.sim
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot sim_behav

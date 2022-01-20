@@ -56,7 +56,6 @@
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module design_1_ram_out_selector_0_0 (
   clk,
-  read_strobe,
   ram_sel,
   data_in_1,
   data_in_2,
@@ -66,7 +65,6 @@ module design_1_ram_out_selector_0_0 (
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN design_1_clk, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *)
 input wire clk;
-input wire read_strobe;
 input wire ram_sel;
 input wire [7 : 0] data_in_1;
 input wire [7 : 0] data_in_2;
@@ -74,7 +72,6 @@ output wire [7 : 0] data_in;
 
   ram_out_selector inst (
     .clk(clk),
-    .read_strobe(read_strobe),
     .ram_sel(ram_sel),
     .data_in_1(data_in_1),
     .data_in_2(data_in_2),
