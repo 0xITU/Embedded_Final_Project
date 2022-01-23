@@ -55,23 +55,18 @@
 (* IP_DEFINITION_SOURCE = "module_ref" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module design_1_ram_out_selector_0_0 (
-  clk,
   ram_sel,
   data_in_1,
   data_in_2,
   data_in
 );
 
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN design_1_clk, INSERT_VIP 0" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *)
-input wire clk;
 input wire ram_sel;
 input wire [7 : 0] data_in_1;
 input wire [7 : 0] data_in_2;
 output wire [7 : 0] data_in;
 
   ram_out_selector inst (
-    .clk(clk),
     .ram_sel(ram_sel),
     .data_in_1(data_in_1),
     .data_in_2(data_in_2),

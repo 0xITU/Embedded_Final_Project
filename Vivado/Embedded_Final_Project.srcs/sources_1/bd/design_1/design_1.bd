@@ -7,28 +7,55 @@
       "name": "design_1",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2021.1"
+      "tool_version": "2021.1",
+      "validated": "true"
     },
     "design_tree": {
       "blk_mem_gen_0": "",
       "blk_mem_gen_1": "",
       "ram_selector_0": "",
-      "top_0": "",
-      "ram_out_selector_0": ""
+      "ram_out_selector_0": "",
+      "top_0": ""
     },
     "ports": {
       "clk": {
         "type": "clk",
         "direction": "I",
         "parameters": {
+          "CLK_DOMAIN": {
+            "value": "design_1_clk",
+            "value_src": "default"
+          },
           "FREQ_HZ": {
             "value": "100000000"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
           }
         }
       },
       "interrupt": {
         "type": "intr",
-        "direction": "I"
+        "direction": "I",
+        "parameters": {
+          "PortWidth": {
+            "value": "1",
+            "value_src": "default"
+          },
+          "SENSITIVITY": {
+            "value": "LEVEL_HIGH",
+            "value_src": "default"
+          }
+        }
       }
     },
     "components": {
@@ -141,6 +168,37 @@
           }
         }
       },
+      "ram_out_selector_0": {
+        "vlnv": "xilinx.com:module_ref:ram_out_selector:1.0",
+        "xci_name": "design_1_ram_out_selector_0_0",
+        "xci_path": "ip\\design_1_ram_out_selector_0_0\\design_1_ram_out_selector_0_0.xci",
+        "inst_hier_path": "ram_out_selector_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "ram_out_selector",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "ram_sel": {
+            "direction": "I"
+          },
+          "data_in_1": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "data_in_2": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "data_in": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          }
+        }
+      },
       "top_0": {
         "vlnv": "xilinx.com:module_ref:top:1.0",
         "xci_name": "design_1_top_0_0",
@@ -202,37 +260,6 @@
           },
           "interrupt_ack": {
             "direction": "O"
-          }
-        }
-      },
-      "ram_out_selector_0": {
-        "vlnv": "xilinx.com:module_ref:ram_out_selector:1.0",
-        "xci_name": "design_1_ram_out_selector_0_0",
-        "xci_path": "ip\\design_1_ram_out_selector_0_0\\design_1_ram_out_selector_0_0.xci",
-        "inst_hier_path": "ram_out_selector_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "ram_out_selector",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "ram_sel": {
-            "direction": "I"
-          },
-          "data_in_1": {
-            "direction": "I",
-            "left": "7",
-            "right": "0"
-          },
-          "data_in_2": {
-            "direction": "I",
-            "left": "7",
-            "right": "0"
-          },
-          "data_in": {
-            "direction": "O",
-            "left": "7",
-            "right": "0"
           }
         }
       }

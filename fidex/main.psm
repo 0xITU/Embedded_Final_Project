@@ -1,8 +1,10 @@
-load s0 0x01
-wrprt s0, 0
-load s1, 0x02
-wrprt s1, 0x80
-rdprt s2, 0
-rdprt s3, 0x80
-load s5, 8
+load sE, 0
+load sF, 128
+loop:
+wrprt sE, (sE)
+wrprt sF, (sF)
+add sE, 1
+add sF, 1
+comp sE, 128
+jump nz, loop
 end: jump end

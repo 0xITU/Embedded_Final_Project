@@ -7,9 +7,9 @@ Pass Through NonSizing Optimizer
 WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'sleep' [D:/Okul/5/EHB326/Project/Embedded_Final_Project/source_files/top.v:19]
 Completed static elaboration
 Starting simulation data flow analysis
-WARNING: [XSIM 43-4099] "D:/Okul/5/EHB326/Project/Embedded_Final_Project/source_files/ram_out_selector.v" Line 1. Module ram_out_selector doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Okul/5/EHB326/Project/Embedded_Final_Project/source_files/ram_selector.v" Line 1. Module ram_selector doesn't have a timescale but at least one module in design has a timescale.
 WARNING: [XSIM 43-4099] "D:/Okul/5/EHB326/Project/Embedded_Final_Project/source_files/BRAM0.v" Line 53. Module BRAM0 doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "D:/Okul/5/EHB326/Project/Embedded_Final_Project/source_files/ram_out_selector.v" Line 1. Module ram_out_selector doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Okul/5/EHB326/Project/Embedded_Final_Project/source_files/ram_selector.v" Line 1. Module ram_selector doesn't have a timescale but at least one module in design has a timescale.
 WARNING: [XSIM 43-4099] "D:/Okul/5/EHB326/Project/Embedded_Final_Project/source_files/BRAM0.v" Line 53. Module BRAM0 doesn't have a timescale but at least one module in design has a timescale.
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
@@ -37,7 +37,7 @@ Compiling module unisims_ver.FDR_2
 Compiling module unisims_ver.RAM64M
 Compiling module xil_defaultlib.kcpsm6_default
 Compiling module unisims_ver.RB18_INTERNAL_VLOG(READ_WIDTH_A=...
-Compiling module unisims_ver.RAMB18E1(INITP_00=256'b010000000...
+Compiling module unisims_ver.RAMB18E1(INITP_00=256'b010110101...
 Compiling module unisims_ver.RAMB16BWER(DATA_WIDTH_A=18,DATA_...
 Compiling module xil_defaultlib.BRAM0
 Compiling module xil_defaultlib.top
