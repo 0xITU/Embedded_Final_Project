@@ -1,10 +1,18 @@
 load sE, 0
 load sF, 128
-loop:
+wr_loop:
 wrprt sE, (sE)
 wrprt sF, (sF)
 add sE, 1
 add sF, 1
 comp sE, 128
-jump nz, loop
+jump nz, wr_loop
+load sE, 0
+rd_mem:
+rdprt s0, (sE)
+rdprt s0, (sE)
+wrmem s0, (sE)
+add sE, 1
+comp sE, 128
+jump nz, rd_mem
 end: jump end

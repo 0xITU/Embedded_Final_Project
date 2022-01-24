@@ -1,7 +1,7 @@
 //Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-//Date        : Sun Jan 23 11:50:29 2022
+//Date        : Mon Jan 24 17:35:13 2022
 //Host        : enes running 64-bit major release  (build 9200)
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -49,10 +49,10 @@ module design_1
         .data_in_2(blk_mem_gen_1_douta),
         .ram_sel(top_0_ram_sel));
   design_1_ram_selector_0_0 ram_selector_0
-       (.clk(clk_1),
-        .ram_sel(top_0_ram_sel),
+       (.ram_sel(top_0_ram_sel),
         .ram_sel_1(ram_selector_0_ram_sel_1),
         .ram_sel_2(ram_selector_0_ram_sel_2),
+        .read_strobe(top_0_read_strobe),
         .write_strobe(top_0_write_strobe));
   design_1_top_0_0 top_0
        (.clk(clk_1),

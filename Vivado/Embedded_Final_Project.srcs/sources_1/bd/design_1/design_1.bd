@@ -13,9 +13,9 @@
     "design_tree": {
       "blk_mem_gen_0": "",
       "blk_mem_gen_1": "",
+      "top_0": "",
       "ram_selector_0": "",
-      "ram_out_selector_0": "",
-      "top_0": ""
+      "ram_out_selector_0": ""
     },
     "ports": {
       "clk": {
@@ -129,76 +129,6 @@
           }
         }
       },
-      "ram_selector_0": {
-        "vlnv": "xilinx.com:module_ref:ram_selector:1.0",
-        "xci_name": "design_1_ram_selector_0_0",
-        "xci_path": "ip\\design_1_ram_selector_0_0\\design_1_ram_selector_0_0.xci",
-        "inst_hier_path": "ram_selector_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "ram_selector",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "write_strobe": {
-            "direction": "I"
-          },
-          "ram_sel": {
-            "direction": "I"
-          },
-          "clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "FREQ_HZ": {
-                "value": "100000000",
-                "value_src": "user_prop"
-              },
-              "CLK_DOMAIN": {
-                "value": "design_1_clk",
-                "value_src": "default_prop"
-              }
-            }
-          },
-          "ram_sel_1": {
-            "direction": "O"
-          },
-          "ram_sel_2": {
-            "direction": "O"
-          }
-        }
-      },
-      "ram_out_selector_0": {
-        "vlnv": "xilinx.com:module_ref:ram_out_selector:1.0",
-        "xci_name": "design_1_ram_out_selector_0_0",
-        "xci_path": "ip\\design_1_ram_out_selector_0_0\\design_1_ram_out_selector_0_0.xci",
-        "inst_hier_path": "ram_out_selector_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "ram_out_selector",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "ram_sel": {
-            "direction": "I"
-          },
-          "data_in_1": {
-            "direction": "I",
-            "left": "7",
-            "right": "0"
-          },
-          "data_in_2": {
-            "direction": "I",
-            "left": "7",
-            "right": "0"
-          },
-          "data_in": {
-            "direction": "O",
-            "left": "7",
-            "right": "0"
-          }
-        }
-      },
       "top_0": {
         "vlnv": "xilinx.com:module_ref:top:1.0",
         "xci_name": "design_1_top_0_0",
@@ -262,6 +192,65 @@
             "direction": "O"
           }
         }
+      },
+      "ram_selector_0": {
+        "vlnv": "xilinx.com:module_ref:ram_selector:1.0",
+        "xci_name": "design_1_ram_selector_0_0",
+        "xci_path": "ip\\design_1_ram_selector_0_0\\design_1_ram_selector_0_0.xci",
+        "inst_hier_path": "ram_selector_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "ram_selector",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "write_strobe": {
+            "direction": "I"
+          },
+          "read_strobe": {
+            "direction": "I"
+          },
+          "ram_sel": {
+            "direction": "I"
+          },
+          "ram_sel_1": {
+            "direction": "O"
+          },
+          "ram_sel_2": {
+            "direction": "O"
+          }
+        }
+      },
+      "ram_out_selector_0": {
+        "vlnv": "xilinx.com:module_ref:ram_out_selector:1.0",
+        "xci_name": "design_1_ram_out_selector_0_0",
+        "xci_path": "ip\\design_1_ram_out_selector_0_0\\design_1_ram_out_selector_0_0.xci",
+        "inst_hier_path": "ram_out_selector_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "ram_out_selector",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "ram_sel": {
+            "direction": "I"
+          },
+          "data_in_1": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "data_in_2": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "data_in": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          }
+        }
       }
     },
     "nets": {
@@ -282,7 +271,6 @@
           "clk",
           "blk_mem_gen_1/clka",
           "blk_mem_gen_0/clka",
-          "ram_selector_0/clk",
           "top_0/clk"
         ]
       },
@@ -333,7 +321,8 @@
       },
       "top_0_read_strobe": {
         "ports": [
-          "top_0/read_strobe"
+          "top_0/read_strobe",
+          "ram_selector_0/read_strobe"
         ]
       },
       "top_0_write_strobe": {
