@@ -1,8 +1,80 @@
-load s0 0x01
-wrprt s0, 0
-load s1, 0x02
-wrprt s1, 0x80
-rdprt s2, 0
-rdprt s3, 0x80
-load s5, 8
+#ifDef proc::xPblze6
+
+	#set proc::xPblze6::scrpdSize,				64						; [64, 128, 256]
+	#set proc::xPblze6::clkFreq,				100000000				; in Hz
+			
+	#set IOdev::BRAM0::en,						TRUE
+	#set IOdev::BRAM0::type,					mem
+	#set IOdev::BRAM0::size,					1024
+			
+	#set instmem::pageSize,						1024
+	#set instmem::pageCount,					1
+	#set instmem::sharedMemLocation,			loMem	; [ hiMem, loMem ]
+			
+	#set IOdev::BRAM0::value,					instMem
+			
+	#set IOdev::BRAM0::vhdlEn,					TRUE
+	#set IOdev::BRAM0::vhdlEntityName,			"BRAM0"
+	#set IOdev::BRAM0::vhdlTmplFile,			"ROM_form.vhd"
+	#set IOdev::BRAM0::vhdlTargetFile,			"BRAM0.vhd"
+#endIf
+INT ENABLE
+LOAD s0, 0
+LOAD s1, 0
+
+
+LOAD s2, 0x5
+LOAD s3, 0x8
+LOAD s4, 0x11
+LOAD s5, 0x13
+LOAD s6, 0x20
+
+LOAD s7, 0x8
+LOAD s8, 0x19
+LOAD s9, 0x55
+LOAD sA, 0x85
+LOAD sB, 0x1
+
+WRPRT s2, 0x00
+WRPRT s3, 0x01
+WRPRT s4, 0x02
+WRPRT s5, 0x03
+WRPRT s6, 0x04
+WRPRT s7, 0x80
+WRPRT s8, 0x81
+WRPRT s9, 0x82
+WRPRT sA, 0x83
+WRPRT sB, 0x84
+
+LOAD s0, 0
+LOAD s1, 0x80
+LOAD s2, 0
+read:	
+	RDPRT sF, (s0)
+	RDPRT sE, (s1)
+	NOP
+	NOP
+	ADD s0, 1
+	ADD s1, 1
+	ADD s2, 1
+	NOP
+	NOP
+	COMP s2, 5
+	JUMP C,read
+	JUMP NC, continue 
+
+continue:
+NOP
+NOP
+NOP
+
 end: jump end
+ISR:
+LOAD sA, sF
+WRPRT sE, (s0)
+WRPRT sA, (s1)
+RETI ENABLE
+#org ADDR 0x3ff
+JUMP ISR
+
+
