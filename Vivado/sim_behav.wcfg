@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="525.000 ns"></ZoomStartTime>
-      <ZoomEndTime time="746.099 ns"></ZoomEndTime>
-      <Cursor1Time time="101,000.000 ns"></Cursor1Time>
+      <ZoomStartTime time="300.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="625.040 ns"></ZoomEndTime>
+      <Cursor1Time time="455.100 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="204"></NameColumnWidth>
-      <ValueColumnWidth column_width="88"></ValueColumnWidth>
+      <ValueColumnWidth column_width="83"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="13" />
+   <WVObjectSize size="14" />
    <wvobject fp_name="/sim/clk" type="logic">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -44,13 +44,17 @@
       <obj_property name="ElementShortName">ram_sel</obj_property>
       <obj_property name="ObjectShortName">ram_sel</obj_property>
    </wvobject>
-   <wvobject fp_name="/sim/des_1/design_1_i/ram_out_selector_0/data_in_1" type="array">
-      <obj_property name="ElementShortName">data_in_1[7:0]</obj_property>
-      <obj_property name="ObjectShortName">data_in_1[7:0]</obj_property>
-   </wvobject>
    <wvobject fp_name="/sim/des_1/design_1_i/ram_out_selector_0/data_in" type="array">
       <obj_property name="ElementShortName">data_in[7:0]</obj_property>
       <obj_property name="ObjectShortName">data_in[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim/des_1/design_1_i/xor_block_0/data_1" type="array">
+      <obj_property name="ElementShortName">data_1[7:0]</obj_property>
+      <obj_property name="ObjectShortName">data_1[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim/des_1/design_1_i/xor_block_0/data_2" type="array">
+      <obj_property name="ElementShortName">data_2[7:0]</obj_property>
+      <obj_property name="ObjectShortName">data_2[7:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/sim/des_1/design_1_i/ram_selector_0/ram_sel_1" type="logic">
       <obj_property name="ElementShortName">ram_sel_1</obj_property>

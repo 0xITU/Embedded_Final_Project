@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x6A4A8B193CD7818A",
+      "boundary_crc": "0xC9D39A5A807B5913",
       "device": "xc7k70tfbv676-1",
       "gen_directory": "../../../../Embedded_Final_Project.gen/sources_1/bd/design_1",
       "name": "design_1",
@@ -43,6 +43,9 @@
             "value_src": "default"
           }
         }
+      },
+      "interrupt_ack": {
+        "direction": "O"
       }
     },
     "components": {
@@ -337,6 +340,12 @@
           "top_0/data_out",
           "blk_mem_gen_1/dina",
           "blk_mem_gen_0/dina"
+        ]
+      },
+      "top_0_interrupt_ack": {
+        "ports": [
+          "top_0/interrupt_ack",
+          "interrupt_ack"
         ]
       },
       "top_0_port_id": {

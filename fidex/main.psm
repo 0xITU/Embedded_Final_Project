@@ -29,18 +29,20 @@ WRPRT sB, 0x84
 LOAD s0, 0
 LOAD s1, 0x80
 LOAD s2, 0
-read:	
+read:
+	int disable	
 	RDPRT sF, (s0)
 	RDPRT sF, (s0)
 	RDPRT sE, (s1)
+	int enable
 	RDPRT sE, (s1)
 	NOP
-	NOP
+	;NOP
 	ADD s0, 1
 	ADD s1, 1
 	ADD s2, 1
-	NOP
-	NOP
+	;NOP
+	;NOP
 	COMP s2, 5
 	JUMP C,read
 	JUMP NC, continue 
@@ -52,9 +54,9 @@ NOP
 
 end: jump end
 ISR:
-LOAD sA, sF
+;LOAD sA, sF
 WRPRT sE, (s0)
-WRPRT sA, (s1)
+WRPRT sF, (s1)
 RETI ENABLE
 #org ADDR 0x3ff
 JUMP ISR

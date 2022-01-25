@@ -165,6 +165,7 @@ proc create_root_design { parentCell } {
 
   # Create ports
   set clk [ create_bd_port -dir I -type clk -freq_hz 100000000 clk ]
+  set interrupt_ack [ create_bd_port -dir O interrupt_ack ]
 
   # Create instance: blk_mem_gen_0, and set properties
   set blk_mem_gen_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:blk_mem_gen:8.4 blk_mem_gen_0 ]
@@ -254,6 +255,7 @@ proc create_root_design { parentCell } {
   connect_bd_net -net ram_selector_0_ram_sel_1 [get_bd_pins blk_mem_gen_0/wea] [get_bd_pins ram_selector_0/ram_sel_1]
   connect_bd_net -net ram_selector_0_ram_sel_2 [get_bd_pins blk_mem_gen_1/wea] [get_bd_pins ram_selector_0/ram_sel_2]
   connect_bd_net -net top_0_data_out [get_bd_pins blk_mem_gen_0/dina] [get_bd_pins blk_mem_gen_1/dina] [get_bd_pins top_0/data_out]
+  connect_bd_net -net top_0_interrupt_ack [get_bd_ports interrupt_ack] [get_bd_pins top_0/interrupt_ack]
   connect_bd_net -net top_0_port_id [get_bd_pins blk_mem_gen_0/addra] [get_bd_pins blk_mem_gen_1/addra] [get_bd_pins top_0/port_id]
   connect_bd_net -net top_0_ram_sel [get_bd_pins ram_out_selector_0/ram_sel] [get_bd_pins ram_selector_0/ram_sel] [get_bd_pins top_0/ram_sel]
   connect_bd_net -net top_0_read_strobe [get_bd_pins ram_selector_0/read_strobe] [get_bd_pins top_0/read_strobe] [get_bd_pins xor_block_0/read_strobe]

@@ -1,7 +1,7 @@
 //Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-//Date        : Tue Jan 25 18:38:53 2022
+//Date        : Tue Jan 25 22:01:08 2022
 //Host        : enes running 64-bit major release  (build 9200)
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -11,8 +11,10 @@
 
 (* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=6,numReposBlks=6,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=4,numPkgbdBlks=0,bdsource=USER,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
 module design_1
-   (clk);
+   (clk,
+    interrupt_ack);
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.CLK, CLK_DOMAIN design_1_clk, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0" *) input clk;
+  output interrupt_ack;
 
   wire [7:0]blk_mem_gen_0_douta;
   wire [7:0]blk_mem_gen_1_douta;
@@ -21,6 +23,7 @@ module design_1
   wire ram_selector_0_ram_sel_1;
   wire ram_selector_0_ram_sel_2;
   wire [7:0]top_0_data_out;
+  wire top_0_interrupt_ack;
   wire [6:0]top_0_port_id;
   wire top_0_ram_sel;
   wire top_0_read_strobe;
@@ -28,6 +31,7 @@ module design_1
   wire xor_block_0_interrupt;
 
   assign clk_1 = clk;
+  assign interrupt_ack = top_0_interrupt_ack;
   design_1_blk_mem_gen_0_1 blk_mem_gen_0
        (.addra(top_0_port_id),
         .clka(clk_1),
@@ -56,6 +60,7 @@ module design_1
         .data_in(ram_out_selector_0_data_in),
         .data_out(top_0_data_out),
         .interrupt(xor_block_0_interrupt),
+        .interrupt_ack(top_0_interrupt_ack),
         .port_id(top_0_port_id),
         .ram_sel(top_0_ram_sel),
         .read_strobe(top_0_read_strobe),
