@@ -1,43 +1,3 @@
-<<<<<<< HEAD
-load sE, 0
-load sF, 128
-wr_loop:
-wrprt sE, (sE)
-wrprt sF, (sF)
-add sE, 1
-add sF, 1
-comp sE, 128
-jump nz, wr_loop
-load sE, 0
-rd_mem:
-rdprt s0, (sE)
-rdprt s0, (sE)
-wrmem s0, (sE)
-add sE, 1
-comp sE, 128
-jump nz, rd_mem
-end: jump end
-=======
-#ifDef proc::xPblze6
-
-	#set proc::xPblze6::scrpdSize,				64						; [64, 128, 256]
-	#set proc::xPblze6::clkFreq,				100000000				; in Hz
-			
-	#set IOdev::BRAM0::en,						TRUE
-	#set IOdev::BRAM0::type,					mem
-	#set IOdev::BRAM0::size,					1024
-			
-	#set instmem::pageSize,						1024
-	#set instmem::pageCount,					1
-	#set instmem::sharedMemLocation,			loMem	; [ hiMem, loMem ]
-			
-	#set IOdev::BRAM0::value,					instMem
-			
-	#set IOdev::BRAM0::vhdlEn,					TRUE
-	#set IOdev::BRAM0::vhdlEntityName,			"BRAM0"
-	#set IOdev::BRAM0::vhdlTmplFile,			"ROM_form.vhd"
-	#set IOdev::BRAM0::vhdlTargetFile,			"BRAM0.vhd"
-#endIf
 INT ENABLE
 LOAD s0, 0
 LOAD s1, 0
@@ -98,4 +58,3 @@ RETI ENABLE
 JUMP ISR
 
 
->>>>>>> 9d59932014c6166a425a4261240e62a33b5a1ccc
