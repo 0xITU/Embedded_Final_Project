@@ -31,6 +31,8 @@ LOAD s1, 0x80
 LOAD s2, 0
 read:	
 	RDPRT sF, (s0)
+	RDPRT sF, (s0)
+	RDPRT sE, (s1)
 	RDPRT sE, (s1)
 	NOP
 	NOP
