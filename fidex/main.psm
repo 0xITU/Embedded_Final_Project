@@ -1,23 +1,19 @@
-int disable	
-LOAD s0, 0
-LOAD s1, 0
 
-
-LOAD s2, 0x5
-LOAD s3, 0x8
-LOAD s4, 0x11
+LOAD s2, 0x5 ;loading random values to the registers
+LOAD s3, 0x8 ;5 random values for the RAM1,
+LOAD s4, 0x11 ; and 5 random values for the RAM2
 LOAD s5, 0x13
 LOAD s6, 0x20
 
-LOAD s7, 0x8
+LOAD s7, 0x8 ;random values for the RAM2
 LOAD s8, 0x19
 LOAD s9, 0x55
 LOAD sA, 0x85
 LOAD sB, 0x1
 
-WRPRT s2, 0x00
-WRPRT s3, 0x01
-WRPRT s4, 0x02
+WRPRT s2, 0x00 ;write these values to each RAM, first RAM has the size of 0x00 to 0x80,
+WRPRT s3, 0x01 ;so adresses in this range will be belong to the RAM1. And the others will be belong to the RAM2
+WRPRT s4, 0x02 ; Hence, s2, s3, s4, s5, s6 values will be written in RAM1. And the rest is for RAM2.
 WRPRT s5, 0x03
 WRPRT s6, 0x04
 WRPRT s7, 0x80
@@ -26,21 +22,21 @@ WRPRT s9, 0x82
 WRPRT sA, 0x83
 WRPRT sB, 0x84
 
-LOAD s0, 0
-LOAD s1, 0x80
-LOAD s2, 0
+LOAD s0, 0 ; adress holder for RAM1
+LOAD s1, 0x80 ;adress holder for RAM2
+LOAD s2, 0 ; counter 
 read:
 	
-	RDPRT sF, (s0)
-	RDPRT sF, (s0)
-	RDPRT sE, (s1)
-	int enable
-	RDPRT sE, (s1)
+	RDPRT sF, (s0) ;very basic read algorithm
+	RDPRT sF, (s0) ; s0 will always hold the current adress of RAM1, and s1 is for the RAM2.
+	RDPRT sE, (s1) ; sF will always hold the current adress of s0, sE will hold s1's value
+	int enable ; enable the interrupts
+	RDPRT sE, (s1) ;  the reason of double reading is extending the signals width. 
 	NOP
 	ADD s0, 1
 	ADD s1, 1
 	ADD s2, 1
-	COMP s2, 5
+	COMP s2, 5 ;do this for all the values, if any of the values are different, we will send an interrupt signal.
 	JUMP C,read
 	JUMP NC, continue 
 
@@ -51,10 +47,10 @@ NOP
 
 end: jump end
 ISR:
-;LOAD sA, sF
+;LOAD sA, sF ;swap algorithm, since sE and sF holding the different values. All we need to do is writing these values to the opposite addresses
 WRPRT sE, (s0)
 WRPRT sF, (s1)
-RETI disable
+RETI disable ;return 
 
 
 
