@@ -4,11 +4,33 @@ Running: C:/Xilinx/Vivado/2021.1/bin/unwrapped/win64.o/xelab.exe -wto 3d3f8c631f
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
-WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'sleep' [D:/Okul/5/EHB326/Project/Embedded_Final_Project/source_files/top.v:19]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'sleep' [D:/Okul/5/EHB326/Project/Embedded_Final_Project/source_files/top.v:22]
 Completed static elaboration
 Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "D:/Okul/5/EHB326/Project/Embedded_Final_Project/source_files/ram_out_selector.v" Line 12. Module ram_out_selector_default doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Okul/5/EHB326/Project/Embedded_Final_Project/source_files/ram_out_selector.v" Line 1. Module one_bit_selector doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Okul/5/EHB326/Project/Embedded_Final_Project/source_files/ram_out_selector.v" Line 1. Module one_bit_selector doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Okul/5/EHB326/Project/Embedded_Final_Project/source_files/ram_out_selector.v" Line 1. Module one_bit_selector doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Okul/5/EHB326/Project/Embedded_Final_Project/source_files/ram_out_selector.v" Line 1. Module one_bit_selector doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Okul/5/EHB326/Project/Embedded_Final_Project/source_files/ram_out_selector.v" Line 1. Module one_bit_selector doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Okul/5/EHB326/Project/Embedded_Final_Project/source_files/ram_out_selector.v" Line 1. Module one_bit_selector doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Okul/5/EHB326/Project/Embedded_Final_Project/source_files/ram_out_selector.v" Line 1. Module one_bit_selector doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Okul/5/EHB326/Project/Embedded_Final_Project/source_files/ram_out_selector.v" Line 1. Module one_bit_selector doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Okul/5/EHB326/Project/Embedded_Final_Project/source_files/ram_selector.v" Line 1. Module ram_selector doesn't have a timescale but at least one module in design has a timescale.
 WARNING: [XSIM 43-4099] "D:/Okul/5/EHB326/Project/Embedded_Final_Project/source_files/BRAM0.v" Line 53. Module BRAM0 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Okul/5/EHB326/Project/Embedded_Final_Project/source_files/xor_block.v" Line 1. Module xor_block doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Okul/5/EHB326/Project/Embedded_Final_Project/source_files/ram_out_selector.v" Line 12. Module ram_out_selector_default doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Okul/5/EHB326/Project/Embedded_Final_Project/source_files/ram_out_selector.v" Line 1. Module one_bit_selector doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Okul/5/EHB326/Project/Embedded_Final_Project/source_files/ram_out_selector.v" Line 1. Module one_bit_selector doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Okul/5/EHB326/Project/Embedded_Final_Project/source_files/ram_out_selector.v" Line 1. Module one_bit_selector doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Okul/5/EHB326/Project/Embedded_Final_Project/source_files/ram_out_selector.v" Line 1. Module one_bit_selector doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Okul/5/EHB326/Project/Embedded_Final_Project/source_files/ram_out_selector.v" Line 1. Module one_bit_selector doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Okul/5/EHB326/Project/Embedded_Final_Project/source_files/ram_out_selector.v" Line 1. Module one_bit_selector doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Okul/5/EHB326/Project/Embedded_Final_Project/source_files/ram_out_selector.v" Line 1. Module one_bit_selector doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Okul/5/EHB326/Project/Embedded_Final_Project/source_files/ram_out_selector.v" Line 1. Module one_bit_selector doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Okul/5/EHB326/Project/Embedded_Final_Project/source_files/ram_selector.v" Line 1. Module ram_selector doesn't have a timescale but at least one module in design has a timescale.
 WARNING: [XSIM 43-4099] "D:/Okul/5/EHB326/Project/Embedded_Final_Project/source_files/BRAM0.v" Line 53. Module BRAM0 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Okul/5/EHB326/Project/Embedded_Final_Project/source_files/xor_block.v" Line 1. Module xor_block doesn't have a timescale but at least one module in design has a timescale.
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
 Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4_output_stage(...

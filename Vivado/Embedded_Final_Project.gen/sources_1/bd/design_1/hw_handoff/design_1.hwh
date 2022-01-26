@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Jan 25 22:01:08 2022" VIVADOVERSION="2021.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Jan 26 11:10:29 2022" VIVADOVERSION="2021.1">
 
   <SYSTEMINFO ARCH="kintex7" DEVICE="7k70t" NAME="design_1" PACKAGE="fbv676" SPEEDGRADE="-1"/>
 
@@ -8,8 +8,8 @@
       <CONNECTIONS>
         <CONNECTION INSTANCE="blk_mem_gen_1" PORT="clka"/>
         <CONNECTION INSTANCE="blk_mem_gen_0" PORT="clka"/>
-        <CONNECTION INSTANCE="xor_block_0" PORT="clk"/>
         <CONNECTION INSTANCE="top_0" PORT="clk"/>
+        <CONNECTION INSTANCE="xor_block_0" PORT="clk"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="O" NAME="interrupt_ack" SIGIS="undef" SIGNAME="top_0_interrupt_ack">
@@ -199,8 +199,8 @@
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="douta" RIGHT="0" SIGIS="undef" SIGNAME="blk_mem_gen_0_douta">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="ram_out_selector_0" PORT="data_in_1"/>
             <CONNECTION INSTANCE="xor_block_0" PORT="data_1"/>
+            <CONNECTION INSTANCE="ram_out_selector_0" PORT="data_in_1"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -399,8 +399,8 @@
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="douta" RIGHT="0" SIGIS="undef" SIGNAME="blk_mem_gen_1_douta">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="ram_out_selector_0" PORT="data_in_2"/>
             <CONNECTION INSTANCE="xor_block_0" PORT="data_2"/>
+            <CONNECTION INSTANCE="ram_out_selector_0" PORT="data_in_2"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -523,8 +523,8 @@
         </PORT>
         <PORT DIR="O" NAME="ram_sel" SIGIS="undef" SIGNAME="top_0_ram_sel">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="ram_selector_0" PORT="ram_sel"/>
             <CONNECTION INSTANCE="ram_out_selector_0" PORT="ram_sel"/>
+            <CONNECTION INSTANCE="ram_selector_0" PORT="ram_sel"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="write_strobe" SIGIS="undef" SIGNAME="top_0_write_strobe">
@@ -534,8 +534,8 @@
         </PORT>
         <PORT DIR="O" NAME="read_strobe" SIGIS="undef" SIGNAME="top_0_read_strobe">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="ram_selector_0" PORT="read_strobe"/>
             <CONNECTION INSTANCE="xor_block_0" PORT="read_strobe"/>
+            <CONNECTION INSTANCE="ram_selector_0" PORT="read_strobe"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="interrupt_ack" SIGIS="undef" SIGNAME="top_0_interrupt_ack">

@@ -1,17 +1,17 @@
 # compile verilog/system verilog design source files
 verilog xil_defaultlib  \
-"../../../../../source_files/BRAM0.v" \
-"../../../../../source_files/kcpsm6.v" \
-"../../../../../source_files/top.v" \
 "../../../../../source_files/ram_selector.v" \
 "../../../../../source_files/ram_out_selector.v" \
 "../../../../../source_files/xor_block.v" \
+"../../../../../source_files/BRAM0.v" \
+"../../../../../source_files/kcpsm6.v" \
+"../../../../../source_files/top.v" \
 "../../../../Embedded_Final_Project.ip_user_files/bd/design_1/ip/design_1_blk_mem_gen_0_1/sim/design_1_blk_mem_gen_0_1.v" \
 "../../../../Embedded_Final_Project.ip_user_files/bd/design_1/ip/design_1_blk_mem_gen_1_0/sim/design_1_blk_mem_gen_1_0.v" \
-"../../../../Embedded_Final_Project.ip_user_files/bd/design_1/ip/design_1_top_0_0/sim/design_1_top_0_0.v" \
 "../../../../Embedded_Final_Project.ip_user_files/bd/design_1/ip/design_1_ram_selector_0_0/sim/design_1_ram_selector_0_0.v" \
 "../../../../Embedded_Final_Project.ip_user_files/bd/design_1/ip/design_1_ram_out_selector_0_0/sim/design_1_ram_out_selector_0_0.v" \
 "../../../../Embedded_Final_Project.ip_user_files/bd/design_1/ip/design_1_xor_block_0_0/sim/design_1_xor_block_0_0.v" \
+"../../../../Embedded_Final_Project.ip_user_files/bd/design_1/ip/design_1_top_0_0/sim/design_1_top_0_0.v" \
 "../../../../Embedded_Final_Project.ip_user_files/bd/design_1/sim/design_1.v" \
 "../../../../Embedded_Final_Project.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v" \
 "../../../../../source_files/sim.v" \

@@ -13,10 +13,10 @@ vlog -work blk_mem_gen_v8_4_4  -v2k5 \
 vlog -work xil_defaultlib  -v2k5 \
 "../../../bd/design_1/ip/design_1_blk_mem_gen_0_1/sim/design_1_blk_mem_gen_0_1.v" \
 "../../../bd/design_1/ip/design_1_blk_mem_gen_1_0/sim/design_1_blk_mem_gen_1_0.v" \
-"../../../bd/design_1/ip/design_1_top_0_0/sim/design_1_top_0_0.v" \
 "../../../bd/design_1/ip/design_1_ram_selector_0_0/sim/design_1_ram_selector_0_0.v" \
 "../../../bd/design_1/ip/design_1_ram_out_selector_0_0/sim/design_1_ram_out_selector_0_0.v" \
 "../../../bd/design_1/ip/design_1_xor_block_0_0/sim/design_1_xor_block_0_0.v" \
+"../../../bd/design_1/ip/design_1_top_0_0/sim/design_1_top_0_0.v" \
 "../../../bd/design_1/sim/design_1.v" \
 
 vlog -work xil_defaultlib \
