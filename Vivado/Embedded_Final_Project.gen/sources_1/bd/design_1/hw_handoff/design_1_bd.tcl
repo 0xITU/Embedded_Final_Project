@@ -258,7 +258,7 @@ proc create_root_design { parentCell } {
   connect_bd_net -net top_0_interrupt_ack [get_bd_ports interrupt_ack] [get_bd_pins top_0/interrupt_ack]
   connect_bd_net -net top_0_port_id [get_bd_pins blk_mem_gen_0/addra] [get_bd_pins blk_mem_gen_1/addra] [get_bd_pins top_0/port_id]
   connect_bd_net -net top_0_ram_sel [get_bd_pins ram_out_selector_0/ram_sel] [get_bd_pins ram_selector_0/ram_sel] [get_bd_pins top_0/ram_sel]
-  connect_bd_net -net top_0_read_strobe [get_bd_pins ram_selector_0/read_strobe] [get_bd_pins top_0/read_strobe] [get_bd_pins xor_block_0/read_strobe]
+  connect_bd_net -net top_0_read_strobe [get_bd_pins top_0/read_strobe] [get_bd_pins xor_block_0/read_strobe]
   connect_bd_net -net top_0_write_strobe [get_bd_pins ram_selector_0/write_strobe] [get_bd_pins top_0/write_strobe]
   connect_bd_net -net xor_block_0_interrupt [get_bd_pins top_0/interrupt] [get_bd_pins xor_block_0/interrupt]
 

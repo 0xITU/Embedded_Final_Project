@@ -1,5 +1,4 @@
 module ram_selector (input write_strobe,
-                     input read_strobe,
                      input ram_sel,
                      output ram_sel_1,
                      output ram_sel_2);

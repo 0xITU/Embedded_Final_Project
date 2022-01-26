@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Jan 26 11:10:29 2022" VIVADOVERSION="2021.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Jan 26 16:05:37 2022" VIVADOVERSION="2021.1">
 
   <SYSTEMINFO ARCH="kintex7" DEVICE="7k70t" NAME="design_1" PACKAGE="fbv676" SPEEDGRADE="-1"/>
 
@@ -464,11 +464,6 @@
             <CONNECTION INSTANCE="top_0" PORT="write_strobe"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="read_strobe" SIGIS="undef" SIGNAME="top_0_read_strobe">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="top_0" PORT="read_strobe"/>
-          </CONNECTIONS>
-        </PORT>
         <PORT DIR="I" NAME="ram_sel" SIGIS="undef" SIGNAME="top_0_ram_sel">
           <CONNECTIONS>
             <CONNECTION INSTANCE="top_0" PORT="ram_sel"/>
@@ -535,7 +530,6 @@
         <PORT DIR="O" NAME="read_strobe" SIGIS="undef" SIGNAME="top_0_read_strobe">
           <CONNECTIONS>
             <CONNECTION INSTANCE="xor_block_0" PORT="read_strobe"/>
-            <CONNECTION INSTANCE="ram_selector_0" PORT="read_strobe"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="interrupt_ack" SIGIS="undef" SIGNAME="top_0_interrupt_ack">

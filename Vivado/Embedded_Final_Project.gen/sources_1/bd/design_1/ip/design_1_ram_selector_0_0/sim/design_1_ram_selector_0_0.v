@@ -56,21 +56,18 @@
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module design_1_ram_selector_0_0 (
   write_strobe,
-  read_strobe,
   ram_sel,
   ram_sel_1,
   ram_sel_2
 );
 
 input wire write_strobe;
-input wire read_strobe;
 input wire ram_sel;
 output wire ram_sel_1;
 output wire ram_sel_2;
 
   ram_selector inst (
     .write_strobe(write_strobe),
-    .read_strobe(read_strobe),
     .ram_sel(ram_sel),
     .ram_sel_1(ram_sel_1),
     .ram_sel_2(ram_sel_2)

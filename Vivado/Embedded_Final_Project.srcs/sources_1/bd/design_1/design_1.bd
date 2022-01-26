@@ -278,9 +278,6 @@
           "write_strobe": {
             "direction": "I"
           },
-          "read_strobe": {
-            "direction": "I"
-          },
           "ram_sel": {
             "direction": "I"
           },
@@ -365,8 +362,7 @@
       "top_0_read_strobe": {
         "ports": [
           "top_0/read_strobe",
-          "xor_block_0/read_strobe",
-          "ram_selector_0/read_strobe"
+          "xor_block_0/read_strobe"
         ]
       },
       "top_0_write_strobe": {
